@@ -1,6 +1,6 @@
 import Image from "next/image";
 import heroImage from "../assets/heroImage.png";
-import { MdOutlineKeyboardArrowRight } from "react-icons/Md";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 export default function Home() {
   return (
