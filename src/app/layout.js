@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import SocialLinks from "@/components/SocialLinks";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
+import Experience from "@/components/Experience";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <About />
         <Portfolio />
         <SocialLinks />
+        <Experience />
       </body>
     </html>
   );
