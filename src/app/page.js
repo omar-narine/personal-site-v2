@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import heroImage from "../assets/heroImage.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-scroll";
 
 export default function Home() {
   return (
@@ -19,13 +21,18 @@ export default function Home() {
             hello, fill in later hello, fill in later hello, fill in later
           </p>
           <div>
-            <button className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
+            <Link
+              to="portfolio"
+              smooth
+              duration={500}
+              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+            >
               Portfolio
               <MdOutlineKeyboardArrowRight
                 className="group-hover:rotate-90 duration-300 ml-1"
                 size={25}
               />
-            </button>
+            </Link>
           </div>
         </div>
         <div>
