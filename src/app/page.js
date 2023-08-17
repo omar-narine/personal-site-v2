@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import heroImage from "../assets/heroImage.png";
+import heroImage from "../assets/heroImage.jpeg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
