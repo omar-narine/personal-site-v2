@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import heroImage from "../assets/heroImage.jpeg";
+import pfp from "../assets/heroImage.jpeg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
         <div>
           <Image
-            src={heroImage}
+            src={pfp}
             alt="my profile"
             className="rounded-2xl mx-auto w-2/3 md:w-full"
           />
