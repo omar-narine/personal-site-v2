@@ -5,6 +5,7 @@ import SocialLinks from "@/components/SocialLinks";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
 import Experience from "@/components/Experience";
+import Contact from "@/components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         <Portfolio />
         <SocialLinks />
         <Experience />
+        <Contact />
       </body>
     </html>
   );
