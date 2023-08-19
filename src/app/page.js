@@ -12,13 +12,14 @@ export default function Home() {
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center items-center md:items-start h-full">
-          <h2 className="text-4xl md:text-7xl font-bold text-white">
-            I am a Full Stack developer
+          <h2 className="text-3xl md:text-6xl font-bold text-white">
+            I&apos;m a new grad Software Engineer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            hello, fill in later hello, fill in later hello, fill in later
-            hello, fill in later hello, fill in later hello, fill in later
-            hello, fill in later hello, fill in later hello, fill in later
+            My name is Omar and I am a rising senior at St. John&apos;s
+            University studying Computer Science. I have experience working on
+            full stack applications and am currently diversifying my experience
+            by working on mobile applications and leveraging AI tools!
           </p>
           <div>
             <Link
