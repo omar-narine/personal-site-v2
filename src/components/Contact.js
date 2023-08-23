@@ -1,6 +1,11 @@
+"use client";
 import React from "react";
 
 const Contact = () => {
+  const onSubmit = (event) => {
+    console.log("hello world");
+  };
+
   return (
     <div
       name="contact"
@@ -18,6 +23,7 @@ const Contact = () => {
           <form
             action="https://getform.io/f/c658d050-3fce-48fe-b486-0983c804f306"
             method="POST"
+            onSubmit={onSubmit}
             className="flex flex-col w-full md:w-10/12"
           >
             <input

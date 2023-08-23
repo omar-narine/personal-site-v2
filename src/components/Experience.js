@@ -10,7 +10,7 @@ import tailwind from "../assets/tailwind.png";
 import python from "../assets/python.png";
 import java from "../assets/java.png";
 import gcp from "../assets/gcp.png";
-import aws from "../assets/aws2.png";
+import aws from "../assets/aws.png";
 import docker from "../assets/docker.png";
 
 const Experience = () => {
