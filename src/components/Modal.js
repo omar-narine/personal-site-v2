@@ -16,7 +16,7 @@ const Modal = ({ isVisible, onClose, children }) => {
     >
       <div className="w-[90%] mx-auto md:w-[600px] flex flex-col">
         <div
-          className="md:hidden cursor-pointer text-white place-self-end py-2"
+          className="cursor-pointer text-white place-self-end py-2 z-10"
           onClick={() => onClose()}
         >
           <FaTimes />
