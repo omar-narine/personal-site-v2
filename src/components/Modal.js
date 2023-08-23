@@ -14,7 +14,7 @@ const Modal = ({ isVisible, onClose, children }) => {
       id="wrapper"
       onClick={handleClose}
     >
-      <div className="w-1/2 md:w-[400px] flex flex-col">
+      <div className="w-[90%] mx-auto md:w-[600px] flex flex-col">
         <div
           className="md:hidden cursor-pointer text-white place-self-end py-2"
           onClick={() => onClose()}

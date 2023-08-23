@@ -14,10 +14,32 @@ const Portfolio = () => {
   const [errorModalOpen, setErrorModal] = useState(false);
   const [demoModalOpen, setDemoModal] = useState(false);
   const [codeModalOpen, setCodeModal] = useState(false);
+  const [modalContent, setModalContent] = useState();
 
-  const linkRedirect = (link) => {
+  const linkRedirect = (link, modalType) => {
     if (!link) {
       setErrorModal(true);
+      setModalContent(
+        <div>
+          <div className="text-red-600 font-bold text-2xl flex flex-col items-center">
+            <h1>ERROR</h1>
+          </div>
+          <div>
+            <p className="flex flex-col items-center text-center pb-2">
+              It looks like this project&apos;s {modalType} is not publicly
+              available! This site is constantly changing so check back another
+              time to see if the {modalType} has been uploaded and made
+              available.
+            </p>
+            <p className="text-slate-400 italic flex flex-col items-center text-center pt-2 pb-1">
+              Please note some of these projects are still under development or
+              being updated
+            </p>
+          </div>
+        </div>
+      );
+    } else if (modalType == "repo") {
+      window.open(link, "_blank");
     }
   };
 
@@ -25,42 +47,42 @@ const Portfolio = () => {
     {
       id: 1,
       src: arrayDestruct,
-      name: "Project 1",
-      demoLink: null,
+      name: "Tayyib - Halal Food Finder",
+      demoLink: "",
       repoLink: null,
     },
     {
       id: 2,
       src: reactParallax,
-      name: "Project 2",
+      name: "Medicine Dosage Tracker",
       demoLink: null,
-      repoLink: null,
+      repoLink: "https://github.com/omar-narine/Medicine-Tracker",
     },
     {
       id: 3,
       src: navbar,
-      name: "Project 3",
+      name: "Plan-A-Headstarter",
       demoLink: null,
-      repoLink: null,
+      repoLink: "https://github.com/omar-narine/Plan-A-Headstarter",
     },
     {
       id: 4,
       src: reactSmooth,
-      name: "Project 4",
+      name: "Task Assigner - Reminders",
       demoLink: null,
-      repoLink: null,
+      repoLink: "https://github.com/omar-narine/TaskAssigner-Frontend",
     },
     {
       id: 5,
       src: installNode,
-      name: "Project 5",
+      name: "Resume Parser",
       demoLink: null,
-      repoLink: null,
+      repoLink: "https://github.com/omar-narine/ResumeParser-Frontend",
     },
     {
       id: 6,
       src: reactWeather,
-      name: "Project 6",
+      name: "Vehicular Cloud System Tracker",
       demoLink: null,
       repoLink: null,
     },
@@ -69,11 +91,11 @@ const Portfolio = () => {
   return (
     <Fragment>
       <Modal isVisible={errorModalOpen} onClose={() => setErrorModal(false)}>
-        <div className="backdrop-blur">test</div>
+        <div className="backdrop-blur">{modalContent}</div>
       </Modal>
-      <Modal isVisible={demoModalOpen} onClose={() => setErrorModal(false)}>
+      {/* <Modal isVisible={demoModalOpen} onClose={() => setErrorModal(false)}>
         <div className="backdrop-blur">test</div>
-      </Modal>
+      </Modal> */}
       <div
         name="portfolio"
         className="pt-[120px] md:pt-0 bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
@@ -86,7 +108,7 @@ const Portfolio = () => {
             <p className="py-6">Check out some of my work right here!</p>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 ">
-            {portfolios.map(({ id, src, name }) => (
+            {portfolios.map(({ id, src, name, repoLink, demoLink }) => (
               <div
                 key={id}
                 className="shadow-md shadow-gray-600 
@@ -102,13 +124,13 @@ const Portfolio = () => {
                 />
                 <div className="flex items-center justify-center text-gray-400">
                   <button
-                    onClick={() => linkRedirect()}
+                    onClick={() => linkRedirect(demoLink, "demo")}
                     className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-blue-300"
                   >
                     Demo
                   </button>
                   <button
-                    onClick={() => linkRedirect()}
+                    onClick={() => linkRedirect(repoLink, "repo")}
                     className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-blue-300"
                   >
                     Code
