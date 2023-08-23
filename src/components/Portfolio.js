@@ -125,7 +125,7 @@ const Portfolio = () => {
                 <div className="flex items-center justify-center text-gray-400">
                   <button
                     onClick={() => linkRedirect(demoLink, "demo")}
-                    className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-blue-300"
+                    className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-blue-300 hover:-z-50"
                   >
                     Demo
                   </button>
