@@ -7,6 +7,11 @@ import reactImage from "../assets/react.png";
 import nextjs from "../assets/nextjs.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import python from "../assets/python.png";
+import java from "../assets/java.png";
+import gcp from "../assets/gcp.png";
+import aws from "../assets/aws2.png";
+import docker from "../assets/docker.png";
 
 const Experience = () => {
   const techStackExperience = [
@@ -18,15 +23,15 @@ const Experience = () => {
     },
     {
       id: 2,
-      src: github,
+      src: python,
       title: "Python",
-      style: "shadow-gray-400",
+      style: "shadow-yellow-300",
     },
     {
       id: 3,
-      src: github,
+      src: java,
       title: "Java",
-      style: "shadow-gray-400",
+      style: "shadow-amber-600",
     },
     {
       id: 4,
@@ -66,21 +71,21 @@ const Experience = () => {
     },
     {
       id: 10,
-      src: github,
+      src: aws,
       title: "AWS",
-      style: "shadow-gray-400",
+      style: "shadow-orange-300",
     },
     {
       id: 11,
-      src: github,
+      src: gcp,
       title: "GCP",
-      style: "shadow-gray-400",
+      style: "shadow-red-500",
     },
     {
       id: 13,
-      src: github,
+      src: docker,
       title: "Docker",
-      style: "shadow-gray-400",
+      style: "shadow-blue-500",
     },
   ];
 
@@ -101,9 +106,9 @@ const Experience = () => {
           {techStackExperience.map(({ id, src, style, title }) => (
             <div
               key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              className={`flex flex-col justify-between h-full shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
             >
-              <Image src={src} alt="" className="w-20 mx-auto" />
+              <Image src={src} alt="" className="w-20 mx-auto pt-2" />
               <p className="mt-4">{title}</p>
             </div>
           ))}
