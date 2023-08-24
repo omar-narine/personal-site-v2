@@ -1,9 +1,25 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
-  const onSubmit = (event) => {
-    console.log("hello world");
+  const [formFilled, setFormFill] = useState(false);
+
+  const onInputChange = (e) => {
+    const name = e.target.form.name.value;
+    const email = e.target.form.email.value;
+    const message = e.target.form.message.value;
+
+    if (name && email && message) {
+      setFormFill(true);
+    } else {
+      setFormFill(false);
+    }
+  };
+
+  const onSubmit = (e) => {
+    if (!formFilled) {
+      e.preventDefault();
+    }
   };
 
   return (
@@ -23,29 +39,36 @@ const Contact = () => {
           <form
             action="https://getform.io/f/c658d050-3fce-48fe-b486-0983c804f306"
             method="POST"
-            onSubmit={onSubmit}
             className="flex flex-col w-full md:w-10/12"
+            onSubmit={onSubmit}
           >
             <input
               type="text"
               name="name"
               placeholder="Enter your name"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              onChange={onInputChange}
             ></input>
             <input
               type="text"
               name="email"
               placeholder="Enter your email"
               className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              onChange={onInputChange}
             ></input>
             <textarea
               name="message"
               rows="10"
               placeholder="Enter your message"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              onChange={onInputChange}
             ></textarea>
-            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-              Submit
+            <button
+              className={`text-white to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300 ${
+                formFilled ? "bg-gradient-to-b from-cyan-500" : "bg-slate-600"
+              }`}
+            >
+              {formFilled ? <p>Submit</p> : <p>Please Enter All Fields</p>}
             </button>
           </form>
         </div>

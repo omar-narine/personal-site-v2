@@ -42,7 +42,7 @@ const SocialLinks = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/Omar Narine's Resume.pdf",
+      href: "https://docs.google.com/document/d/1ZoO810JtrDnh0mSKxfQTj4OuCnK9lBOt340jAmCrFUc/edit?usp=sharing",
       style: "rounded-br-md",
       download: true,
     },
