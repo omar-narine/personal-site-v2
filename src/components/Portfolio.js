@@ -6,19 +6,19 @@ import navbar from "../assets/portfolio/navbar.jpg";
 import reactParallax from "../assets/portfolio/reactParallax.jpg";
 import reactWeather from "../assets/portfolio/reactWeather.jpg";
 import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import Link from "next/link";
 import { Fragment, useState } from "react";
 import Modal from "./Modal";
 
 const Portfolio = () => {
-  const [errorModalOpen, setErrorModal] = useState(false);
-  const [demoModalOpen, setDemoModal] = useState(false);
-  const [codeModalOpen, setCodeModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [blurColor, setBlurColor] = useState();
   const [modalContent, setModalContent] = useState();
 
   const linkRedirect = (link, modalType) => {
+    setBlurColor("bg-black");
     if (!link) {
-      setErrorModal(true);
+      setModalOpen(true);
+      setBlurColor("bg-red-950");
       setModalContent(
         <div>
           <div className="text-red-600 font-bold text-2xl flex flex-col items-center">
@@ -90,12 +90,13 @@ const Portfolio = () => {
 
   return (
     <Fragment>
-      <Modal isVisible={errorModalOpen} onClose={() => setErrorModal(false)}>
+      <Modal
+        isVisible={modalOpen}
+        blurColor={blurColor}
+        onClose={() => setModalOpen(false)}
+      >
         <div className="backdrop-blur">{modalContent}</div>
       </Modal>
-      {/* <Modal isVisible={demoModalOpen} onClose={() => setErrorModal(false)}>
-        <div className="backdrop-blur">test</div>
-      </Modal> */}
       <div
         name="portfolio"
         className="pt-[120px] md:pt-0 bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"

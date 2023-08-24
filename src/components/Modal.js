@@ -1,7 +1,7 @@
 import React, { Children } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Modal = ({ isVisible, onClose, children }) => {
+const Modal = ({ isVisible, onClose, children, blurColor }) => {
   if (!isVisible) return null;
 
   const handleClose = (e) => {
@@ -10,7 +10,7 @@ const Modal = ({ isVisible, onClose, children }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center z-10"
+      className={`fixed inset-0 ${blurColor} bg-opacity-25 backdrop-blur-sm flex justify-center items-center z-10`}
       id="wrapper"
       onClick={handleClose}
     >
