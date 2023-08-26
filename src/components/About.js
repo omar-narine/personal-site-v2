@@ -17,7 +17,7 @@ const About = () => {
           I&apos;m a dedicated Computer Science enthusiast on a journey of
           crafting innovative digital solutions. With a passion for
           problem-solving and a comprehensive skill set encompassing Python,
-          Java, JavaScript, and more, I'm poised to bring creativity and
+          Java, JavaScript, and more, I&apos;m poised to bring creativity and
           technical prowess to any project.
         </p>
         <br />
@@ -25,17 +25,17 @@ const About = () => {
           My academic journey at St. John&apos;s University has cultivated a
           strong foundation, evident in my academic performance and dynamic
           range of skills. From cloud technologies like AWS and GCP to version
-          control with Git and CI/CD workflows using Docker, I'm well-versed in
-          modern tech landscapes.
+          control with Git and CI/CD workflows using Docker, I&apos;m
+          well-versed in modern tech landscapes.
         </p>
         <br />
         <p className="text-xl">
-          Beyond coding, my collaborative spirit shines. I've co-led a Google
-          Developer Student Club, orchestrating hands-on workshops and fostering
-          a thriving tech community. My project portfolio showcases diverse
-          accomplishments, such as crafting a real-time communication platform
-          and a my current undertaking of building a one stop shop for finding
-          halal restaurants with AI integration.
+          Beyond coding, my collaborative spirit shines. I&apos;ve co-led a
+          Google Developer Student Club, orchestrating hands-on workshops and
+          fostering a thriving tech community. My project portfolio showcases
+          diverse accomplishments, such as crafting a real-time communication
+          platform and a my current undertaking of building a one stop shop for
+          finding halal restaurants with AI integration.
         </p>
       </div>
     </div>
