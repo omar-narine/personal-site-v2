@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div
       name="about"
-      className="pt-[550px] pb-[150px] sm:pt-0 sm:pb-0 md:pt-0 w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
+      className="pt-[450px] pb-[150px] sm:pt-0 sm:pb-0 md:pt-0 w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-3">
@@ -12,7 +12,7 @@ const About = () => {
             About
           </p>
         </div>
-        <p className="text-xl mt-20">
+        <p className=" mt-20 text-lg">
           {" "}
           I&apos;m a dedicated Computer Science enthusiast on a journey of
           crafting innovative digital solutions. With a passion for
@@ -21,7 +21,7 @@ const About = () => {
           technical prowess to any project.
         </p>
         <br />
-        <p className="text-xl">
+        <p className="text-lg">
           My academic journey at St. John&apos;s University has cultivated a
           strong foundation, evident in my academic performance and dynamic
           range of skills. From cloud technologies like AWS and GCP to version
@@ -29,7 +29,7 @@ const About = () => {
           well-versed in modern tech landscapes.
         </p>
         <br />
-        <p className="text-xl">
+        <p className="text-lg">
           Beyond coding, my collaborative spirit shines. I&apos;ve co-led a
           Google Developer Student Club, orchestrating hands-on workshops and
           fostering a thriving tech community. My project portfolio showcases
