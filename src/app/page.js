@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import pfp from "../assets/heroImage.jpeg";
+import pfp from "../assets/heroImage.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
