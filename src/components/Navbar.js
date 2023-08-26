@@ -36,7 +36,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white fixed bg-black">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white fixed bg-black z-10">
       <div>
         <Link
           to="home"
