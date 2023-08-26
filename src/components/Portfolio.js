@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import installNode from "../assets/portfolio/installNode.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
+import vcrts from "../assets/portfolio/vcrts.png";
+import resumeParser from "../assets/portfolio/resumeParser.png";
+import taskAssigner from "../assets/portfolio/taskAssigner.png";
+import planAHeadstarter from "../assets/portfolio/planAHeadstarter.png";
+import dosageTracker from "../assets/portfolio/dosageTracker.png";
+import wip from "../assets/portfolio/wip.jpeg";
 import { Fragment, useState } from "react";
 import Modal from "./Modal";
 
@@ -46,45 +46,45 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: arrayDestruct,
+      src: wip,
       name: "Tayyib - Halal Food Finder",
       demoLink: "",
       repoLink: null,
     },
     {
       id: 2,
-      src: reactParallax,
-      name: "Medicine Dosage Tracker",
-      demoLink: null,
-      repoLink: "https://github.com/omar-narine/Medicine-Tracker",
-    },
-    {
-      id: 3,
-      src: navbar,
+      src: planAHeadstarter,
       name: "Plan-A-Headstarter",
       demoLink: null,
       repoLink: "https://github.com/omar-narine/Plan-A-Headstarter",
     },
     {
-      id: 4,
-      src: reactSmooth,
+      id: 3,
+      src: taskAssigner,
       name: "Task Assigner - Reminders",
       demoLink: null,
       repoLink: "https://github.com/omar-narine/TaskAssigner-Frontend",
     },
     {
+      id: 4,
+      src: dosageTracker,
+      name: "Medicine Dosage Tracker",
+      demoLink: null,
+      repoLink: "https://github.com/omar-narine/Medicine-Tracker",
+    },
+    {
       id: 5,
-      src: installNode,
+      src: resumeParser,
       name: "Resume Parser",
       demoLink: null,
       repoLink: "https://github.com/omar-narine/ResumeParser-Frontend",
     },
     {
       id: 6,
-      src: reactWeather,
+      src: vcrts,
       name: "Vehicular Cloud System Tracker",
       demoLink: null,
-      repoLink: null,
+      repoLink: "https://github.com/omar-narine/VCRTSNEW",
     },
   ];
 
